@@ -1,0 +1,33 @@
+{
+  "name": "pubsub",
+  "version": "0.0.1",
+  "description": "PubSub example",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/nodemon src/app.js",
+    "debug": "./node_modules/.bin/nodemon --inspect=0.0.0.0:9229 src/app.js"
+  },
+  "keywords": [
+    "project",
+    "test",
+    "node",
+    "publish",
+    "subscribe",
+    "redis",
+    "bull"
+  ],
+  "author": "Frederico Martini",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "bull": "^3.4.8",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.0.2",
+    "eslint-plugin-import": "^2.2.0",
+    "nodemon": "^1.17.5"
+  }
+}

@@ -1,0 +1,30 @@
+FROM node:carbon
+
+# Create app directory
+#RUN mkdir -p /usr/src/app
+
+WORKDIR /usr/src/app
+
+# Copy app dependencies
+COPY package.json .
+
+# Install App dependencies
+RUN npm install
+
+#RUN apt-get update && apt-get nodejs-npm
+
+# nodemon global
+RUN npm install -g nodemon
+
+# ElasticDump global
+RUN npm install elasticdump -g
+
+#eslint linting utility for json
+RUN npm install -g eslint
+
+# Bundle app source
+COPY . .
+
+EXPOSE 3000 9229
+
+CMD ["npm", "run", "debug"]

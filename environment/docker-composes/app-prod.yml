@@ -1,0 +1,9 @@
+# arquivo extra p/ setar environment p/ produção
+# usar colocar virtual_host com https
+#
+version: "3"
+services:
+  web:
+    environment:
+      LETSENCRYPT_HOST: ${VIRTUAL_HOST}
+      LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
